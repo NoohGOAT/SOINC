@@ -1,0 +1,155 @@
+@keyframes extend{
+    0%{
+        width: 250px;
+        height: 75px;
+        border: 50px;
+    } 10% {
+        width: 250px;
+        height: 75px;
+        background: #ece8ef;
+    } 20% {
+        width: 250px;
+        height: 75px;
+        background: #4392f1
+    } 100% {
+        width: 75px;
+        height: 75px;
+        border-radius: 50px;
+        background: #4392f1
+    } 
+    }@-webkit-keyframes extend{
+        0%{
+            width: 250px;
+            height: 75px;
+            border: 50px;
+        } 10% {
+            width: 250px;
+            height: 75px;
+            background: #ece8ef;
+        } 20% {
+            width: 250px;
+            height: 75px;
+            background: #4392f1
+        } 100% {
+            width: 75px;
+            height: 75px;
+            border-radius: 50px;
+            background: #4392f1
+        } 
+        }
+
+   
+@keyframes dissapear{
+         0%{
+        opacity: 1;
+    }   20% {
+        color: #ece8ef;
+    } 100% {
+
+        opacity: 0;
+    }
+} 
+
+@-webkit-keyframes dissapear{
+    0%{
+   opacity: 1;
+}   20% {
+   color: #ece8ef;
+} 100% {
+
+   opacity: 0;
+}
+}   
+
+@keyframes appear {
+    0% {
+opacity: 0;
+    } 70% {
+opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+}    
+
+@-webkit-keyframes appear {
+    0% {
+opacity: 0;
+    } 70% {
+opacity: 0;
+    } 100% {
+        opacity: 1;
+    }
+} 
+
+body{
+background: #ece8ef;
+margin: 0;
+padding: 0;
+width: 100%;
+display: flex;
+align-items: center;
+align-content: center;
+
+}
+
+.btn-contanier{
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+} 
+
+button{
+    width: 250px;
+    height: 75px;
+    border-radius: 50px;
+    background: #ece8ef;
+    position: absolute; 
+    border: 8px solid #4392f1;
+}
+
+button > span {
+    font-size: 24px;
+    color: #4392f1;
+    letter-spacing: 1px;
+    font-weight: bold;
+
+
+}
+
+img{
+    position: absolute;
+    top: 7;
+    left: 8;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+button:focus {
+    -webkit-animation: extend 0.1s ease-in;
+    animation: extend 0.1s ease-in;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+button:focus > span {
+    animation: disappear 0.1s ease-in;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+button:focus > img {
+    -webkit-animation: appear 0.2s ease-in;
+    animation: appear o.2s ease-in;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+
+}
+
+
